@@ -661,7 +661,7 @@ logic FpgaPins_Fpga_TB_Default_valid_a0;
                            //_/default
                               assign FpgaPins_Fpga_TB_Default_valid_a0 = ! FpgaPins_Fpga_CALC_reset_a0;
                               /*SV_plus*/
-                                 always @(posedge clk) FpgaPins_Fpga_TB_Default_rand_a0[31:0] <= $random();
+                                 always @(posedge clk) FpgaPins_Fpga_TB_Default_rand_a0[31:0] <= 0;
                               assign FpgaPins_Fpga_TB_Default_rand_op_a0[2:0] = FpgaPins_Fpga_TB_Default_rand_a0[2:0];
                               assign FpgaPins_Fpga_TB_Default_rand1_a0[3:0] = FpgaPins_Fpga_TB_Default_rand_a0[6:3];
                               assign FpgaPins_Fpga_TB_Default_rand2_a0[3:0] = FpgaPins_Fpga_TB_Default_rand_a0[10:7];
