@@ -64,7 +64,7 @@ endmodule
 // Debouncing is based on a counter. A change to any input will only be recognized once ALL inputs
 // are stable for a certain duration. This approach uses a single counter vs. a counter for each
 // bit.
-module tt_um_template (
+module tt_um_fpga_hdl_demo (
     input  wire [7:0] ui_in,    // Dedicated inputs - connected to the input switches
     output wire [7:0] uo_out,   // Dedicated outputs - connected to the 7 segment display
        // The FPGA is based on TinyTapeout 3 which has no bidirectional I/Os (vs. TT6 for the ASIC).
@@ -661,7 +661,7 @@ logic FpgaPins_Fpga_TB_Default_valid_a0;
                            //_/default
                               assign FpgaPins_Fpga_TB_Default_valid_a0 = ! FpgaPins_Fpga_CALC_reset_a0;
                               /*SV_plus*/
-                                 always @(posedge clk) FpgaPins_Fpga_TB_Default_rand_a0[31:0] <= 0;
+                                 always @(posedge clk) FpgaPins_Fpga_TB_Default_rand_a0[31:0] <= d;
                               assign FpgaPins_Fpga_TB_Default_rand_op_a0[2:0] = FpgaPins_Fpga_TB_Default_rand_a0[2:0];
                               assign FpgaPins_Fpga_TB_Default_rand1_a0[3:0] = FpgaPins_Fpga_TB_Default_rand_a0[6:3];
                               assign FpgaPins_Fpga_TB_Default_rand2_a0[3:0] = FpgaPins_Fpga_TB_Default_rand_a0[10:7];
